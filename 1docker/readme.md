@@ -68,3 +68,38 @@
 ### se crea y se pone en ejecucion
 * `docker run -d -P --name web2 hello`
 
+---
+
+### troubleshoting
+
+###### Lista 
+* `docker exec web1 ls`
+
+##### procesos
+* `docker exce web1 ps`
+
+##### ejecutar bash entra al contenedor
+* `docker exex -it web1 bash`
+
+##### ver los logs va despues de haber entrado^
+* `taill -f /var/log/nginx/access.log`
+
+---
+## volumenes persistentes
+
+###### Listar volumenes
+* `docker volume ls`
+
+##### crear volumen
+* `docker volume create my-volume`
+
+##### ver propiedades del volumen
+* `docker volume inspect my-volume`
+
+##### crear container en el volumen creado
+* `docker create -P --mount source=my-volume,target=/var/www/html --name web2 hello`
+##### Listar la data del volumne creado
+* `sudo ls /var/lib/docker/volumes/my-volume/_data`
+
+
+
