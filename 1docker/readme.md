@@ -49,3 +49,22 @@
 
 ### crear container con el nombre personalizado
 * `docker create --name web1 helloworld`
+
+---
+
+### obtener ip con docker inspect id_container y lanzar en el navegador
+
+### crear contenedor con el puerto :80
+* `docker create -p 8080:80 --name web1 helloworld`
+
+### colocar ip de la maquina o ell localhost:8080
+
+## reetiquetar
+* `docker tag hello:20.0 hello:latest`
+
+### Crear contenedor con puertos expuestos
+* `docker create -P --name web1 hello`
+
+### se crea y se pone en ejecucion
+* `docker run -d -P --name web2 hello`
+
