@@ -137,6 +137,16 @@
 ### bajar imagen 
 * `docker pull jdvpl/hello`
 
+### crear imagen con variables de entorno
+* `docker create -P -e variable1=variable -e variable2=varaible2 jdvpl/hello:latest`
+
+### entrar a la imagen creada con bash `docker exec -it web1 bash`
+* todos los procesos `ps aux`
+* arbol `ps -A`
+* eliminar todos los procesos de nginx `pkill nginx` 
+
+### logs de supervisor
+* `tail -f /var/log/supervisor/*`
 
 
 
