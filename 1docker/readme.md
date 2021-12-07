@@ -101,5 +101,43 @@
 ##### Listar la data del volumne creado
 * `sudo ls /var/lib/docker/volumes/my-volume/_data`
 
+---
+
+## Network
+
+#### Lista de redes
+* `docker network ls`
+
+#### crear red
+
+* `docker network create web1 --driver bridge`
+
+#### Info de la red
+* `docker network inspect web2`
+
+### crear contenedor en la red creada
+* `docker run -P -d --name web1a --network web1 hello`
+
+### entrar a un contenedor
+* `docker exec -it web1a bash`
+
+### eliminar subredes
+* `docker network prune`
+
+### conectar una red al contenedor
+* `docker network connect nombre_Red nombre_container`
+
+### docker hub
+#### tag de la imagen local debe ir el nombre de usuario del docker hub `https://hub.docker.com/`
+* `docker tag hello jdvpl/hello`
+#### subir imagen
+
+* `docker push jdvpl/hello`
+
+### bajar imagen 
+* `docker pull jdvpl/hello`
+
+
+
 
 
